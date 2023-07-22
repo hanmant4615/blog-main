@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    /* background: #161623; */
+    /* border: 2px solid red; */
+}
+
+/* body::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f00,#f0f);
+    clip-path: circle(30% at right 70%);
+} */
+
+/* body::after{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%; */
+    /* z-index: 1; */
+    /* background: linear-gradient(#2196f3,#e91e63);
+    clip-path: circle(20% at 10% 10%);
+} */
+
+.container1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.container1 .card1{
+    position:relative;
+    width: fit-content;
+    height: fit-content;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    color: #000;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    /* border-top: 1px solid rgba(255, 255, 255, 0.5); */
+    /* border-left: 1px solid rgba(255, 255, 255, 0.5); */
+}
+
+.container1 .card1 .content1{
+padding: 15px;
+text-align: center;
+transition: all ease-out  0.5s ; 
+color: #000;
+}
+
+.container1 .card1 .content1 h2{
+    position: absolute;
+    top: -30px;
+    right: 30px;
+
+    /* original  */
+    /* font-size: 8rem; */
+
+    color: rgba(255, 255, 255, 0.05);
+    pointer-events: none; 
+    /* add  */
+    color: #000;
+}
+
+.container1 .card1 .content1 h3::first-letter{
+   text-transform: capitalize;
+}
+
+.container1 .card1 .content1 h3{
+    font-size: 1.8em;
+    color: #fff;
+    z-index: 1;
+    background: transparent;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      padding: 8px 20px;
+      background-color: #4B4B4B;
+      border-radius: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+      transition: all ease-out  0.5s ;
+    width: 100%;
+}
+.container1 .card1 .content1 p{
+    font-size: 1em;
+    color: #fff;
+    font-weight: 300;
+
+    /* add  */
+    color: #000;
+}
+
+.container1 .card1 .content1 p::first-letter{
+   font-size: 1.5rem;
+   text-transform: capitalize;
+}
+
+.container1 .card1 .content1 a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    margin-top: 15px;
+    background: #fff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 5px 5px  5px 5px rgba(0, 0, 0, 0.2);
+    transition: all ease-out  0.5s ; 
+    /* add  */
+    color: #000;
+}
+
+
