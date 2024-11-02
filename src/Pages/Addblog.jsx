@@ -72,10 +72,6 @@ function Addblog() {
             />
           </div>
 
-          {/* <input type="text" className='mt-3' onChange={e => setcontent(e.target.value)} style={{ width: '90%', height: '350px', borderRadius: '10px' }}>
-
-          </input> */}
-
           <div className="input-group mt-3">
             <textarea
               id="textareainput"
@@ -86,10 +82,7 @@ function Addblog() {
               aria-label="With textarea"
             ></textarea>
           </div>
-          {/* <div className="logininput" style={{ marginTop: "15px" }}>
-            <button className="btn">Cancel</button>
-            <button className="btn">Cancel</button>{" "}
-          </div> */}
+
           <div className="text-center mt-3">
             <button
               className="btn btn-success"

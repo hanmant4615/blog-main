@@ -8,9 +8,9 @@ import moment from "moment/moment";
 
 function Navbar() {
   const [items, setItems] = useState();
-const [mode,setMode] = useState(false)
+  const [mode, setMode] = useState(false);
   const [profiledata, setprofiledata] = useState("");
- 
+
   const loadProfilephoto = () => {
     const url = createURL("user/profile-image");
 
@@ -34,9 +34,6 @@ const [mode,setMode] = useState(false)
           if (dataofimg === null) {
             document.getElementById("navphoto").style.display = "none";
             document.getElementById("navphoto").style.marginRight = "-50px";
-            // document.getElementById('editicon').style.height = '50px'
-            // document.getElementById('editicon').style.width = '50px'
-            // document.getElementById('editprofile').style.borderStyle = 'none'
           }
           setItems(data);
         } else {
@@ -74,10 +71,6 @@ const [mode,setMode] = useState(false)
   const navigate = useNavigate();
 
   function logout() {
-    // sessionStorage.removeItem["firstName"];
-    // sessionStorage.removeItem["lastName"];
-    // sessionStorage.removeItem["token"];
-  
     sessionStorage.removeItem("firstName");
     sessionStorage.removeItem("lastName");
     sessionStorage.removeItem("token");
@@ -150,32 +143,43 @@ const [mode,setMode] = useState(false)
           </ul>
 
           <ul className="navbar-nav  mb-2 mb-lg-0">
-            <li className="nav-item">
-              {/*  first name  */}
-              {/* <Link className="nav-link active" style={{marginRight:10}} aria-current="page" to=""> Welcome , {profiledata.firstName}</Link> */}
-            </li>
+            <li className="nav-item"></li>
           </ul>
           <ul className="navbar-nav  mb-2 mb-lg-0">
             <li className="nav-item">
-              <button className="btn btn-outline-primary" onClick={()=>{
-                setMode(!mode)
-                document.body.style.backgroundColor = mode === false ?"#ffffff" : '#1F1B24'
-                document.getElementById('titleinput').style.backgroundColor =  mode === false ?"#ffffff" : '#1F1B24'
-                document.getElementById('titleinput').style.color =  mode === true ?"#ffffff" : '#1F1B24'
-                document.getElementById('textareainput').style.backgroundColor =  mode === false ?"#ffffff" : '#1F1B24'
-                document.getElementsByClassName('card1').style.backgroundColor =  mode === true ?"#ffffff" : '#1F1B24'
-                document.getElementById('Card_content').style.color = 'red'
-              }}>Dark mode</button>
+              <button
+                className="btn btn-outline-primary"
+                onClick={() => {
+                  setMode(!mode);
+                  document.body.style.backgroundColor =
+                    mode === false ? "#ffffff" : "#1F1B24";
+                  document.getElementById("titleinput").style.backgroundColor =
+                    mode === false ? "#ffffff" : "#1F1B24";
+                  document.getElementById("titleinput").style.color =
+                    mode === true ? "#ffffff" : "#1F1B24";
+                  document.getElementById(
+                    "textareainput"
+                  ).style.backgroundColor =
+                    mode === false ? "#ffffff" : "#1F1B24";
+                  document.getElementsByClassName(
+                    "card1"
+                  ).style.backgroundColor =
+                    mode === true ? "#ffffff" : "#1F1B24";
+                  document.getElementById("Card_content").style.color = "red";
+                }}
+              >
+                Dark mode
+              </button>
             </li>
           </ul>
           <ul className="navbar-nav  mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="">
-                {moment().format('LT')}
+                {moment().format("LT")}
               </Link>
             </li>
           </ul>
-         
+
           <ul
             className="navbar-nav mb-lg-0"
             id="navphoto"
@@ -186,10 +190,6 @@ const [mode,setMode] = useState(false)
               borderRadius: "50%",
             }}
           >
-            {/* <button id='editprofile' data-bs-toggle="collapse" href="#upload"  aria-expanded="false" aria-controls="collapseExample"  style={{ borderStyle: 'none', position: 'relative', border: '2px solid white',  borderRadius: "50%", padding: 10 }}>
-                  <img id="editicon" src={edit} style={{ height: '30px', width: '30px' }} alt='editProfile'></img>
-                </button> */}
-
             {items && (
               <img
                 src={"http://localhost:5000/" + items.profileImage}
@@ -205,8 +205,7 @@ const [mode,setMode] = useState(false)
           </ul>
 
           <button className="btn btn-outline-primary" onClick={logout}>
-            {" "}
-            Log out{" "}
+            Log out
           </button>
         </div>
       </div>

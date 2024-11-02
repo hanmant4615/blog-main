@@ -17,7 +17,6 @@ const Signin = () => {
   const [password, setpassword] = useState("");
 
   function onSignin() {
-    // console.log("firstname =  "+typeof firstName + "lastname " + typeof(lastName) +"email  "+ typeof(email)+"password"+ typeof(password)+" phone"+ typeof(phone))
     if (firstName.length === 0) {
       toast.error("Firstname must be fill");
     } else if (lastName.length === 0) {
@@ -207,8 +206,7 @@ const Signin = () => {
                   style={{ fontSize: 20, fontWeight: 550 }}
                   htmlFor="title"
                 >
-                  {" "}
-                  Set the password{" "}
+                  Set the password
                 </label>
               </div>
             </div>
@@ -223,8 +221,7 @@ const Signin = () => {
                   style={{ fontSize: 20, fontWeight: 550 }}
                   htmlFor="title"
                 >
-                  {" "}
-                  Re-Enter password{" "}
+                  Re-Enter password
                 </label>
               </div>
             </div>
@@ -239,8 +236,7 @@ const Signin = () => {
               Sign in
             </button>
             <Link to="/login" style={{ textDecoration: "none", fontSize: 18 }}>
-              {" "}
-              Already have a account{" "}
+              Already have a account
             </Link>
           </div>
         </div>
