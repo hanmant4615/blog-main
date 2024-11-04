@@ -28,7 +28,7 @@ const SingleBlog = (props) => {
           navigate("/myblog");
         }
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error("error occur");
       });
   };

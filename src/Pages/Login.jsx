@@ -37,7 +37,7 @@ const Login = () => {
             toast.error("Invalid Email and Password ");
           }
         })
-        .catch((error) => {
+        .catch(() => {
           toast.error(" Please check the network ");
         });
     }

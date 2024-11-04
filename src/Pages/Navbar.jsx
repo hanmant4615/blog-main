@@ -9,6 +9,7 @@ import moment from "moment/moment";
 function Navbar() {
   const [items, setItems] = useState();
   const [mode, setMode] = useState(false);
+  // eslint-disable-next-line no-unused-vars
   const [profiledata, setprofiledata] = useState("");
 
   const loadProfilephoto = () => {

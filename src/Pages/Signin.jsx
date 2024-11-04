@@ -45,7 +45,7 @@ const Signin = () => {
           }
         })
         .catch((error) => {
-          toast.error("error occur");
+          toast.error("error occur", error);
         });
     }
   }

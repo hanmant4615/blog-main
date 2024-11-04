@@ -4,8 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { createURL } from "../config";
 import Navbar from "./Navbar";
-import edit from "../Img/edit-solid.svg";
-import Editblog from "./Editblog";
 
 const MyBlog = () => {
   const [myblog, setmyblog] = useState("");
@@ -55,7 +53,7 @@ const MyBlog = () => {
           toast.success("deleted blog");
         }
       })
-      .catch((error) => {
+      .catch(() => {
         toast.error("error occur");
       });
   };

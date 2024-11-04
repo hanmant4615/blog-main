@@ -283,7 +283,7 @@ const Profile = () => {
         }
       })
       .catch((error) => {
-        toast.error("error");
+        toast.error("error", error);
       });
   }
 
@@ -294,7 +294,7 @@ const Profile = () => {
 
     axios
       .post(url, { image }, { headers: { "x-token": token } })
-      .then((res) => {
+      .then(() => {
         console.log("image = " + image);
       })
       .catch((error) => {

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import Navbar from "./Navbar";
 import { createURL } from "../config";
@@ -9,7 +9,6 @@ const Editblog = () => {
   const id = useParams("");
 
   const [details, setdetails] = useState("");
-  const [oldtitle, setoldtitle] = useState("");
 
   const [title, settitle] = useState("");
 
@@ -36,7 +35,7 @@ const Editblog = () => {
             toast.error("Empty");
           } else {
             setmyblog(result["data"]);
-            const { title, details } = myblog[0];
+            // const { title, details } = myblog[0];
           }
         }
       })
@@ -90,7 +89,7 @@ const Editblog = () => {
             navigate("/myblog");
           }
         })
-        .catch((error) => {
+        .catch(() => {
           toast.error("error occur");
         });
     }
