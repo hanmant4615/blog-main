@@ -1,3 +1,4 @@
+import react from react
 import { Link } from "react-router-dom";
 import "./App.css";
 import back1 from "./Img/Blog_Post.jpg";

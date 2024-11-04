@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import SingleBlog from "./SingleBlog";
 import { createURL } from "../config";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";

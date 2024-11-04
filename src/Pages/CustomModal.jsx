@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const CustomModal = (props) => {
+const CustomModal = ({ props }) => {
   const [openModal, setOpenModal] = useState(props.status);
 
   return (
